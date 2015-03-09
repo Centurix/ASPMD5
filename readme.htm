@@ -1,0 +1,109 @@
+<HTML>
+<HEAD>
+<TITLE>ASPDump</TITLE>
+</HEAD>
+<BODY>
+
+<H1>ASPMD5</H1>
+<P>Version 1.0.1 documentation (Monday the 14th April, 2003)</P>
+<H2>Table of contents</H2>
+<P>
+	<A href="#What is ASPDump">What is ASPMD5?</A><BR>
+	<A href="#How does it work">How does it work?</A><BR>
+	<A href="#Requirements">Requirements</A><BR>
+	<A href="#Installation instructions">Installation instructions</A><BR>
+	<A href="#Usage">Usage</A><BR>
+	<A href="#Contacting the author">Contacting the author</A><BR>
+	<A href="#Copyright">Copyright</A><BR>
+	<A href="#Version history">Version history</A>
+</P>
+<H2><a name="What is ASPDump">What is ASPMD5?</a></H2>
+<P>              
+            
+            
+               
+            
+               ASPMD5 
+is a VBScript implementation of the RSA's MD5 algorithm. This script will take a text string 
+of arbitrary length and calculate an MD5 hash from it. Very useful to encrypt things like 
+passwords in databases or transferring over the wire.</P>
+<P align=right><A href="#top">[TOP]</A></P>
+<H2><a name="How does it work">How does it work?</a></H2>
+<P> The MD5 algorithm is documented in RFC 1321. The 
+algorithm uses module math to calculate a 'one-way' hash from a set of 
+data.</P>
+<P align=right><A href="#top">[TOP]</A></P>
+<H2><a name="Requirements">Requirements</a></H2>
+<P>You will require a web server that supports ASP, with version 5.0 or higher 
+of the VBScript library.</P>
+<P align=right><A href="#top">[TOP]</A></P>
+<H2><a name="Installation instructions">Installation instructions</a></H2>
+<P>Copy class_md5.asp onto your IIS server, make sure the folder it sits in has the correct rights 
+to run ASP scripts (check the IIS management console to make sure), and then 
+include the file into your ASP project using a server side include.</P>
+<P align=right><A href="#top">[TOP]</A></P>
+<H2><a name="Usage">Usage</a></H2>
+<P>                 
+              
+    To use the class, you need to create an instance 
+of the MD5 object, feed it some text and retrieve the hash:</P>
+<PRE>Dim objMD5
+Set objMD5 = New MD5
+objMD5.Text = "This is test text"
+Response.Write objMD5.HEXMD5 ' This will display an MD5 hash</PRE>
+<P align=right><A href="#top">[TOP]</A></P>
+<H2><a name="Contacting the author">Contacting the author</a></H2>
+<P>Chris Read can be contacted using the following e-mail address:</P>
+<P><A href="mailto:mrjolly@bigpond.net.au">mrjolly@bigpond.net.au</A></P>
+<P>Chris Read is a lead software engineer for a well respected web development 
+company in Australia. He has several years experience in ASP, but has a greater 
+experience (15+ years) in other areas such as medical imaging, operating 
+systems, communications, DSP, data warehousing and also consults companies on 
+their IT needs. He may not be able to answer your questions immediately, but he 
+does care and will help you out if you need assistance (providing you've read 
+the documentation fully!)</P>
+<P><STRONG>If you're looking for someone to hire to do your web work, drop me a 
+line, my rates are reasonable and my services are always professional.</STRONG> 
+</P>
+<P>The primary location of this source and documentation is at the following 
+address:</P>
+<P><A 
+href="http://users.bigpond.net.au/mrjolly/">http://users.bigpond.net.au/mrjolly/</A></P>
+<P>Have fun! I'm always looking for suggestions to improve stuff, tell me what's 
+right, and tell me what's wrong!</P>
+<P align=right><A href="#top">[TOP]</A></P>
+<H2><A name="Copyright">Copyright</A></H2><CODE>
+<P>ASPMD5 Copyright (c) 2003, Chris Read. All rights reserved.</P>
+<P>Redistribution and use in source&nbsp;form, with or without modification, are 
+permitted provided that the following conditions are met:</P>
+<OL>
+  <LI>
+  <DIV>Redistributions of source code must retain the above copyright notice, 
+  this list of conditions and the following disclaimer.</DIV>
+  <LI>
+  <DIV>All advertising materials mentioning features or use of this software 
+  must display the following acknowledgement: This product includes software 
+  developed by&nbsp;Chris Read.</DIV>
+  <LI>
+  <DIV>The name of the author(s) may not be used to endorse or promote products 
+  derived from this software without specific prior written 
+  permission.</DIV></LI></OL>
+<P>THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED 
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANT 
+ABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL 
+THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, 
+OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING 
+IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY 
+OF SUCH DAMAGE.</P></CODE>
+<P align=right><A href="#top">[TOP]</A></P>
+<H2><a name="Version history">Version history</a></H2>
+<H3>1.0.1 - Fix</H3>
+<ul><li>Attempted to fix type mismatch error, unable to recreate error but took a rough stab</li></ul>
+<P align=right><A href="#top">[TOP]</A></P>
+<H3>1.0.0 - Initial public release</H3>
+<P align=right><A href="#top">[TOP]</A></P>
+</BODY>
+</HTML>
