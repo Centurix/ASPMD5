@@ -1,4 +1,4 @@
-## ASPDump ##
+## ASPMD5 ##
 
 Version 1.0.1 documentation (Monday the 14th April, 2003)
 
